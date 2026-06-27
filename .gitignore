@@ -1,0 +1,31 @@
+# 凭据 / 登录态 —— 绝对不能进仓库
+.env
+.env.bak
+.session_string
+*.session
+*.session-journal
+session_b64.txt
+local_config.py
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# 日志 / 备份
+*.log
+*.bak_*
+
+# 临时逆向 / 探测产物
+front_dump*.js
+probe_*.py
+dump_front_js.py
+
+# 无关实验 / 运行日志（不属于本项目，勿入仓库）
+ctf_socket/
+run_log.txt
+
+# IDE
+.vscode/
+.idea/

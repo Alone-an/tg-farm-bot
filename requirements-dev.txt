@@ -1,0 +1,5 @@
+# 仅测试/开发需要（运行 test_ws_state_machine.py）
+# 安装：python -m pip install -r requirements-dev.txt
+pytest>=8.0
+pytest-asyncio>=0.23
+websockets>=12.0
