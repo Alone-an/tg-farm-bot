@@ -91,15 +91,15 @@ CF_HEADLESS = os.getenv("FARM_CF_HEADLESS", "").strip().lower() in {"1", "true",
 CF_BROWSER_PATH = os.getenv("CF_BROWSER_PATH", "").strip()
 
 # ---- 目标 bot ----
-BOT_USERNAME = os.getenv("BOT_USERNAME", "your_bot_username")
+BOT_USERNAME = os.getenv("BOT_USERNAME", "farmtg")
 
 # ---- 真实地址（抓包确认）----
 # Mini App 页面地址：用于 DrissionPage 过 CF 取 cookie，也用作 Referer/Origin
-MINI_APP_URL = os.getenv("MINI_APP_URL", "https://example.com/")
+MINI_APP_URL = os.getenv("MINI_APP_URL", "https://farmtg.top/")
 # REST 接口根地址（不含末尾斜杠）
-BASE_API_URL = os.getenv("BASE_API_URL", "https://example.com")
+BASE_API_URL = os.getenv("BASE_API_URL", "https://farmtg.top")
 # WebSocket 地址（核心玩法走这里）
-WS_URL = os.getenv("WS_URL", "wss://example.com/api/game/ws")
+WS_URL = os.getenv("WS_URL", "wss://farmtg.top/api/game/ws")
 
 # ---- 操作延迟（秒）----
 DELAY_MIN = 1.5
@@ -153,7 +153,7 @@ CAPTCHA_TOKEN_FIELD = os.getenv("CAPTCHA_TOKEN_FIELD", "captcha_token")
 # 服务端「需要人机验证」的判定值（抓包确认：目标游戏 在 WS result / REST body 里返回 code=此值）
 CAPTCHA_CHALLENGE_CODE = os.getenv("CAPTCHA_CHALLENGE_CODE", "NEED_HUMAN_VERIFICATION")
 # 目标游戏 应用层 Turnstile（抓包自前端 index-*.js）：sitekey、token 提交端点、通过后免验证时长
-CAPTCHA_SITEKEY = os.getenv("CAPTCHA_SITEKEY", "0xAAAAAAAAAAAAAAAAAAAAAA")
+CAPTCHA_SITEKEY = os.getenv("CAPTCHA_SITEKEY", "0x4AAAAAADmotcK0lqq38R89")
 CAPTCHA_VERIFY_PATH = os.getenv("CAPTCHA_VERIFY_PATH", "/api/game/human-verify")
 # 通过后免再验证时长：服务端在 human-verify 回包里给真实值(expires_in，抓包=900s)，
 # 这里仅作回包缺该字段时的兜底（与前端一致留 5s 余量在 human_verify 里扣）。
